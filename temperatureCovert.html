@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Coverter</title>
+</head>
+
+<body>
+    <form>Enter Farenheit
+
+        <input type="text" name="txtFarenheit" id="txtFarenheit"><br>
+        Celsius
+        <input type="text" name="txtCelsius" id="txtCelsius"><br>
+        <input type="button" value="Convert" onclick="convert()">
+
+
+    </form>
+    <script>
+        function temperature() {
+            this.celsius = 0,
+                this.farenheit = 0,
+                this.celsiusToFarenheit = function () {
+                    this.celsius = 5 / 9 * (this.farenheit - 32)
+                }
+
+        }
+        function convert() {
+            var obj = new temperature()
+            obj.farenheit = parseFloat(document.getElementById("txtFarenheit").value)
+            obj.celsiusToFarenheit()
+
+            document.getElementById("txtCelsius").value = obj.celsius
+        }
+
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+
+<body>
+    <form>Enter length
+
+        <input type="text" name="txtlength" id="txtlength"><br>
+        Enter width
+        <input type="text" name="txtwidth" id="txtwidth"><br>
+        <input type="button" value="area of rectangle" onclick="rectangleArea()">
+
+        <input type="button" value="rectangle_perimeter" onclick="rectanglePerimeter()">
+    </form>
+    <script>
+        function rectangle() {
+            this.length = 0,
+                this.width = 0,
+                this.area = function () {
+                    return this.length * this.width
+                }
+            this.perimeter = function () {
+                return 2 * this.length + 2 * this.width
+            }
+
+        }
+        function rectangleArea() {
+            var obj = new rectangle()
+            obj.length = parseFloat(document.getElementById("txtlength").value)
+            obj.width = parseFloat(document.getElementById("txtwidth").value)
+            alert(obj.area())
+        }
+        function rectanglePerimeter() {
+            var obj = new rectangle()
+            obj.length = parseFloat(document.getElementById("txtlength").value)
+            obj.width = parseFloat(document.getElementById("txtwidth").value)
+            alert(obj.perimeter())
+        }
+    </script>
+</body>
+
+
+
+</html>
