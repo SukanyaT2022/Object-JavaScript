@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Coverter both ways</title>
+</head>
+
+<body>
+    <form>Enter Celsius
+        <input type="text" name="txtCelsius" id="txtCelsius"><br>
+       
+        Farenheit
+        <input type="text" name="txtFarenheit" id="txtFarenheit"><br>
+        <input type="button" value="Convert Celsius to Farenheit" onclick="convertCtoF()">
+        <input type="button" value="Convert Farenheit to Celsius " onclick="convertFtoC()">
+
+    </form>
+    <script>
+        function temperature() {
+            this.celsius = 0,
+                this.farenheit = 0,
+                this.celsiusToFarenheit = function () {
+                    this.celsius = 9 / 5 * (this.celsius + 32)
+                },
+                this.farenheitToCelsius = function () {
+                    this.celsius = 5 / 9 * (this.farenheit - 32)
+                }
+
+
+        }
+        function convertCtoF() {
+            var obj = new temperature()
+            obj.celsius = parseFloat(document.getElementById("txtCelsius").value)
+            obj.celsiusToFarenheit()
+
+            document.getElementById("txtFarenheit").value = obj.celsius
+        }
+        function convertFtoC() {
+            var obj = new temperature()
+            obj.farenheit = parseFloat(document.getElementById("txtFarenheit").value)
+            obj.farenheitToCelsius ()
+
+            document.getElementById("txtCelsius").value = obj.celsius
+        }
+
+    </script>
+</body>
+
+
+
+</html>

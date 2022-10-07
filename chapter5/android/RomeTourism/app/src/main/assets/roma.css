@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 21, 2015, 10:26:55 AM
+    Author     : 00220682
+*/
+body{
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+a{
+    color: coral;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+header{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+    position: relative;
+    box-shadow: 2px 2px 5px #888888;
+    margin: auto;
+}
+header h4{
+    text-align: right;
+    font-style: italic;
+}
+nav{
+    position: relative;
+    margin-top: 10px;
+}
+nav ul{
+    background-color: coral;
+    padding: 5px 10px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 5px #888888;
+    width: 85%;
+}
+nav li{
+    display: inline-block;
+    padding: 3px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: coral;
+    background-color: whitesmoke;
+}
+section{
+    position: relative;
+    padding: 5px;
+    display: block;
+    clear: both;
+    margin: 10px auto;
+    box-shadow: 2px 2px 5px #888888;
+    width: 85%;
+    background-color: white;
+}
+section h3{
+    text-align: center;
+}
+img{
+    float: left;
+    padding: 10px;
+}
+footer{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+    position: relative;
+    margin: 10px auto;
+    width: calc(100%-25px);
+    box-shadow: 2px 2px 5px #888888;
+    text-align: center;
+}
+footer a{
+    color: palegoldenrod;
+    text-decoration: none;
+    padding: 3px;
+}
+footer a:hover{
+    text-decoration: underline;
+    background-color: whitesmoke;
+    color: cornflowerblue;
+}
+

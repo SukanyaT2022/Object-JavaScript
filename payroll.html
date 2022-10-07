@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Coverter</title>
+</head>
+
+<body>
+    <form>Enter hours
+
+        <input type="text" name="txthours" id="txthours"><br>
+        Wages
+        <input type="text" name="txtWages" id="txtWages"><br>
+        Salary
+        <input type="text" name="txtsalary" id="txtsalary"><br>
+        <input type="button" value="Calculate" onclick="calculate()">
+
+
+
+    </form>
+    <script>
+        function salary() {
+            this.hours = 0,
+                this.wages = 0,
+                this.calculateSalary = function () {
+                    if (this.hours <= 40) {
+                        return this.hours * this.wages
+                    }
+                    else {
+                        return (this.hours - 40) * this.wages * 1.5 + 40 * this.wages
+                    }
+                }
+        }
+        function calculate() {
+            var obj = new salary()
+            obj.wages = parseFloat(document.getElementById("txtWages").value)
+            obj.hours = parseFloat(document.getElementById("txthours").value)
+            var result = obj.calculateSalary()
+
+            document.getElementById("txtsalary").value = result
+        }
+
+    </script>
+</body>
+
+
+</html>

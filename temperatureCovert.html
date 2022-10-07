@@ -22,7 +22,7 @@
         function temperature() {
             this.celsius = 0,
                 this.farenheit = 0,
-                this.celsiusToFarenheit = function () {
+                this.farenheitToCelsius = function () {
                     this.celsius = 5 / 9 * (this.farenheit - 32)
                 }
 
@@ -30,7 +30,7 @@
         function convert() {
             var obj = new temperature()
             obj.farenheit = parseFloat(document.getElementById("txtFarenheit").value)
-            obj.celsiusToFarenheit()
+            obj.farenheitToCelsius ()
 
             document.getElementById("txtCelsius").value = obj.celsius
         }
